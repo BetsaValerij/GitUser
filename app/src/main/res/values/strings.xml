@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GitUser</string>
+    <string name="SERVER_URL">https://api.github.com</string>
+    <string name="searcher_title">GitHub Searcher</string>
+    <string name="edPersonNameHint">Search For Users</string>
+    <string name="edUserRepoHint">Search For User\'s Repositories</string>
+    <string name="error_load_user_detail">Error load detail...</string>
+    <string name="forks_title">Forks</string>
+    <string name="stars_title">Stars</string>
+</resources>

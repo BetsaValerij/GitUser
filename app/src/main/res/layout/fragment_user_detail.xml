@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/labelSearch"
+        style="@style/TitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/searcher_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/labelSearch">
+
+        <ImageView
+            android:id="@+id/im_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usr_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User:" />
+
+            <TextView
+                android:id="@+id/usr_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email:" />
+
+            <TextView
+                android:id="@+id/usr_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location:" />
+
+            <TextView
+                android:id="@+id/usr_joid_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join:" />
+
+            <TextView
+                android:id="@+id/usr_followers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Followers:" />
+
+            <TextView
+                android:id="@+id/usr_following"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Following:" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/usr_biography"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <EditText
+        android:id="@+id/ed_usr_repo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:autofillHints="@string/edUserRepoHint"
+        android:hint="@string/edUserRepoHint"
+        app:layout_constraintTop_toBottomOf="@+id/usr_biography"></EditText>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user_repo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_usr_repo">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/pb_load_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+</androidx.constraintlayout.widget.ConstraintLayout>
